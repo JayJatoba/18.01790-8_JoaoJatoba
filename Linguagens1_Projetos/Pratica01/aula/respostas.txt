@@ -1,0 +1,8 @@
+1. C:\Program Files\Java\jdk1.8.0_162
+2. C:\Program Files\Java\jdk1.8.0_162\bin
+3. cd path java, javac nome.java
+4. java -jar nomearquivo.jar (https://pt.stackoverflow.com/questions/4964/como-executar-jar-com-o-prompt)
+5. Variável que o SO usa para achar as coisas. Comunicação rápida
+6. só autorizados
+7. criar path no win em variável de ambiente
+8. pasta anterior ao bin, onde tudo do java é guardado 
