@@ -1,14 +1,14 @@
-package com.company;
+package src.com.company;
 
 import java.util.Scanner;
 
 
 public class Main {
 
-    public static void main(String[] args) {
-	// write your code here
+    public static void main(final String[] args) {
+        // write your code here
         double n1, n2;
-        Scanner scanner = new Scanner(System.in);
+        final Scanner scanner = new Scanner(System.in);
         System.out.println("Informe dois valroes: ");
         n1 = scanner.nextDouble();
         //Ctrl + d duplica a linha

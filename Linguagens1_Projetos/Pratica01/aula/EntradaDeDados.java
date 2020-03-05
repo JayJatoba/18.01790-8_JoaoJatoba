@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class EntradaDeDados {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		// tODO Auto-generated method stub
 		Scanner scanner = new Scanner(System.in);
 		String nome;
 		System.out.println("Informe seu nome:");
