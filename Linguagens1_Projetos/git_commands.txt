@@ -3,6 +3,7 @@ cd -> change directory
 git clone -> usar e colocar o URL do site GIThub
 cd ..-> volta para o diretório anterior
 git add . -> adiciona ao que será puxado tudo que foi recém adicionado ou que teve novas mudanças
+git commit "nome da acao" -> envia para o sistema
 git status -> autoexplicativo
 
 javac nomearquivo.java -> compila código
