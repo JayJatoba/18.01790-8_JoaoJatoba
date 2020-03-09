@@ -3,7 +3,7 @@ package Exemplo01;
 public class Conta {
     //Atributos da classe
     public int numero;
-    public String titular, cpf;
+    public Cliente cliente;
     public double saldo;
 
     //Métodos da classe
