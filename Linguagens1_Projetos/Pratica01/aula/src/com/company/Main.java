@@ -1,5 +1,3 @@
-package src.com.company;
-
 import java.util.Scanner;
 
 

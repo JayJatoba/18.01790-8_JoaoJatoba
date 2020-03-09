@@ -1,0 +1,33 @@
+1. Celular: 
+    Oq eh?
+    -marca;
+    -tamanho;
+    -cor;
+    -tipo da tela;
+    -S.O. ;
+    -Camera;
+    
+    Oq faz?
+    -Consegue ligar()
+    -sms()
+    -tirar foto()
+    -baixar aplicativos diversos()
+    -musica()
+    -conectar internet()
+
+2. Oculos
+3. Reuniao
+    Oq eh?
+    
+    -num pessoas
+    -local
+    -assunto
+    -tipo
+
+    Oq faz? (Chamados de metodos- diferente 
+    de funcao por existir dentro de uma classe)
+
+    -discutir()
+    -brigar()
+    -brainstorm()
+    -definir()

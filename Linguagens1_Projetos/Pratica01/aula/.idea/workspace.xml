@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="74e1c0d9-3304-4356-8b0c-68d17fa83fc0" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EntradaDeDados.java" beforeDir="false" afterPath="$PROJECT_DIR$/EntradaDeDados.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OlaEclipse.java" beforeDir="false" afterPath="$PROJECT_DIR$/OlaEclipse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TesteVSCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/TesteVSCode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -21,12 +15,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
-  </component>
-  <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="260" />
-    <option name="y" value="20" />
-    <option name="width" value="1400" />
-    <option name="height" value="1000" />
   </component>
   <component name="ProjectId" id="1YimsNJHsQsc83YCuURZXS9goov" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -77,26 +65,26 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="222" y="0" key="CommitChangelistDialog2/0.0.1366.768@0.0.1366.768" timestamp="1583434221102" />
-    <state width="1286" height="176" key="GridCell.Tab.0.bottom" timestamp="1583434299608">
+    <state width="1286" height="176" key="GridCell.Tab.0.bottom" timestamp="1583758280440">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1286" height="176" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1583434299608" />
-    <state width="1286" height="176" key="GridCell.Tab.0.center" timestamp="1583434299608">
+    <state width="1286" height="176" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1583758280440" />
+    <state width="1286" height="176" key="GridCell.Tab.0.center" timestamp="1583758280439">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1286" height="176" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1583434299608" />
-    <state width="1286" height="176" key="GridCell.Tab.0.left" timestamp="1583434299608">
+    <state width="1286" height="176" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1583758280439" />
+    <state width="1286" height="176" key="GridCell.Tab.0.left" timestamp="1583758280439">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1286" height="176" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1583434299608" />
-    <state width="1286" height="176" key="GridCell.Tab.0.right" timestamp="1583434299608">
+    <state width="1286" height="176" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1583758280439" />
+    <state width="1286" height="176" key="GridCell.Tab.0.right" timestamp="1583758280439">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1286" height="176" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1583434299608" />
-    <state x="384" y="208" key="com.intellij.ide.util.TipDialog" timestamp="1583434068545">
+    <state width="1286" height="176" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1583758280439" />
+    <state x="384" y="208" key="com.intellij.ide.util.TipDialog" timestamp="1583758084572">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="384" y="208" key="com.intellij.ide.util.TipDialog/0.0.1366.768@0.0.1366.768" timestamp="1583434068545" />
+    <state x="384" y="208" key="com.intellij.ide.util.TipDialog/0.0.1366.768@0.0.1366.768" timestamp="1583758084572" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/aula$Main.ic" NAME="Main Coverage Results" MODIFIED="1583434278219" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

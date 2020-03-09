@@ -6,6 +6,12 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - ContaTesteDrive",
+            "request": "launch",
+            "mainClass": "ContaTesteDrive"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - Ex6",
             "request": "launch",
             "mainClass": "Ex6"
