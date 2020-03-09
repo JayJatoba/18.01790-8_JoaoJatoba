@@ -13,7 +13,8 @@ public class Ex3 {
         user = scanner.nextLine();
         System.out.println("Informe sua senha: ");
         key = scanner.nextLine();
-
+        
+        
         
         
 
