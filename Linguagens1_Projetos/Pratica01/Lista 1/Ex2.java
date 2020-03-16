@@ -7,6 +7,7 @@ public class Ex2 {
         // Exercicio 2
         int id1, id2;
         String nome1, nome2;
+        
         Scanner scanner = new Scanner(System.in);
         System.out.println("Informe o primeiro nome: ");
         nome1 = scanner.nextLine();

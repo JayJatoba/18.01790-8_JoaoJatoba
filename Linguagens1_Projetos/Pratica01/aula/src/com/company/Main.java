@@ -6,7 +6,7 @@ public class Main {
     public static void main(final String[] args) {
         // write your code here
         double n1, n2;
-        final Scanner scanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         System.out.println("Informe dois valroes: ");
         n1 = scanner.nextDouble();
         //Ctrl + d duplica a linha
