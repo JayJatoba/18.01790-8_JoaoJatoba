@@ -2,7 +2,6 @@ package ExJKP;
 
 import java.util.Scanner;
 
-import javax.lang.model.util.ElementScanner6;
 
 /**
  * Normal
