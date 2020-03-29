@@ -1,4 +1,10 @@
-%% Exponencial Negativa
+%% Para fazer este código, percebi que o exercício, pelo menos a teoria era muito 
+%% parecido com o anterior (Exponencial negativa), por isso peguei o código deste, 
+%% e modifiquei o necessário para que desse certo. 
+
+%% Triangular
+
+%%%%%%%%%%%% Parte 2 %%%%%%%%%%%%%%%
 
 clear all;
 clc;
@@ -6,9 +12,8 @@ close all;
 pkg load symbolic;
 
 %% Definindo o sinal a ser estudado
-
- gt1 = @(t) (1+t);
- gt2 = @(t) (-t+1);
+ gt1 = @(t) (2);
+ gt2 = @(t) (-2);
  To = 2;
  fo = inv(To);
  wo = 2*pi*fo;
@@ -21,7 +26,7 @@ pkg load symbolic;
 %%% Vetor tempo para visualização do sinal
 %%% diferente da variável simbólica t
 %%% para efeito de organização da solução
-%%% existem outros caminhos
+
 
 M = 1000;
 Ts = To/M;
@@ -83,19 +88,18 @@ end
 
 gr = aux;
 
-%% Visualizando o sinal reconstruido
+%% Reconstrução do sinal
 
 figure(3)
 plot(tempo1,gt1(tempo1),tempo2,gt2(tempo2),tempo,gr)
-% plot(tempo,gr)
 title('Reconstrução do sinal g(t)');
 xlabel('Tempo em segundos');
 ylabel('Amplitude em  volts')
 
-%% Determinando a potência do sinal g(t)
+%% Potência do sinal g(t)
 
-f1 = @(t) (t+1)^2;
-f2 = @(t) (-t+1)^2;
+f1 = @(t) (2)^2;
+f2 = @(t) (-2)^2;
 
 Pg1 = inv(To)*int(f1,t,-1,0) 
 P1 = eval(Pg1)
@@ -103,7 +107,7 @@ Pg2 = inv(To)*int(f2,t,0,1)
 P2 = eval(Pg2)
 Pg = eval(Pg1+Pg2)
 
-%%% Verifica a potência pelo teorema de Paserval
+%%% Teorema de Paserval para cálculo da potência
 
 PN = cumsum([abs(D_o)^2 2*abs(Dn(N+2:end)).^2])
 

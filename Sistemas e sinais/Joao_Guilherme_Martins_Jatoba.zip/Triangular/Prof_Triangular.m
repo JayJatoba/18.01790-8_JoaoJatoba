@@ -1,3 +1,5 @@
+%% Feito pelo professor
+
 %% Exponencial Positiva
 %% Programa dividido em três partes
 %% 
