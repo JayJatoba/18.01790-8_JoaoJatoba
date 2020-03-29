@@ -1,3 +1,8 @@
+%% Adaptado do professor Vanderlei Cunha Parro do Instituto Mauá de Tecnologia
+%% https://github.com/vparro/sinais
+
+
+
 %% Para fazer este código, percebi que o exercício, pelo menos a teoria era muito 
 %% parecido com o anterior (Exponencial negativa), por isso peguei o código deste, 
 %% e modifiquei o necessário para que desse certo. 

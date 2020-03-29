@@ -1,3 +1,6 @@
+%% Feito pelo professor Vanderlei Cunha Parro do Instituto Mauá de Tecnologia
+%% https://github.com/vparro/sinais
+
 %% Exponencial Negativa
 
 clear all;

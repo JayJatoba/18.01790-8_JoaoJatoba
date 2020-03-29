@@ -1,4 +1,5 @@
-%% Feito pelo professor
+%% Feito pelo professor Vanderlei Cunha Parro do Instituto Mauá de Tecnologia
+%% https://github.com/vparro/sinais
 
 %% Exponencial Positiva
 %% Programa dividido em três partes
