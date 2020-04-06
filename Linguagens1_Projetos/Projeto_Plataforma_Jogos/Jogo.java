@@ -3,11 +3,11 @@
  */
 public class Jogo {
 
-    String nome;
-    String genero;
-    String descricao;
-    boolean online;
-    boolean multiplayer;
+    private String nome;
+    private String genero;
+    private String descricao;
+    private boolean online;
+    private boolean multiplayer;
 
     public Jogo(String nome, String genero, String descricao){
         this.nome = nome;

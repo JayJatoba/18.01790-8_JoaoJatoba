@@ -49,6 +49,6 @@ public class Jogo {
 
         System.out.println("J1 - " + j1.competicao(j2) + " - J2");
 
-
+        scanner.close();
     }
 }

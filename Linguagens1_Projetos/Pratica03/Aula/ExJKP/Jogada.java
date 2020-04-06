@@ -13,15 +13,15 @@ public class Jogada {
     public static final String PAPEL = "papel";
     // construtor de jogada
     public Jogada(String opcao) {
-        if(opcao.equals(this.PEDRA)){
-            ganhoDe = this.TESOURA;
-            percoDe = this.PAPEL;
-        }else if (opcao.equals(this.PAPEL)){
-            ganhoDe = this.PEDRA;
-            percoDe = this.TESOURA;
+        if(opcao.equals(Jogada.PEDRA)) {
+            ganhoDe = Jogada.TESOURA;
+            percoDe = Jogada.PAPEL;
+        }else if (opcao.equals(Jogada.PAPEL)) {
+            ganhoDe = Jogada.PEDRA;
+            percoDe = Jogada.TESOURA;
         } else {
-            ganhoDe = this.PAPEL;
-            percoDe = this.PEDRA;
+            ganhoDe = Jogada.PAPEL;
+            percoDe = Jogada.PEDRA;
         }
         
         escolha = opcao;

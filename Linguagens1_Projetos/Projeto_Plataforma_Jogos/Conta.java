@@ -17,6 +17,14 @@ public class Conta {
 
     }
 
+    public String Nick(){
+        return user.getNickname();
+    }
+
+    public void Login(Usuario user){
+        
+    }
+
     public void AddCreditos(double valor){
         this.creditos+=valor;
     }
@@ -25,19 +33,35 @@ public class Conta {
         return this.creditos;
     }
 
+
     public void addJogo(Jogo jogo){
+
         jogos.add(jogo);
     }
+
+    public ArrayList<Jogo> getJogos(){
+        return jogos;
+    }
+
+
 
     public String getInfo(){
         String resposta = "";
         resposta = String.format("{user: %s, credits: %f, jogos: [", 
         user.getNickname(),
         this.creditos);
+
         for(Jogo jogo:jogos){
             resposta += jogo.getInfo()+",";
         }
         resposta+="]}";
         return resposta;
-    }}
+    }
+
+
+
+    public void Mexer(){
+
+    }
+}
 
