@@ -8,11 +8,5 @@ public class Main {
         konoha.todaVila();
         
     }
-
-    
-
-    
-
-
     
 }

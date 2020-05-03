@@ -15,7 +15,7 @@ public class Mission {
         this.allmissions = allmissions;
     }
 
-    public void getMissions(){}
+    // public void getMissions(){}
     // public String getRank(){
     //     String qualRank;
     //     qualRank = allmissions.get(0).get(0);

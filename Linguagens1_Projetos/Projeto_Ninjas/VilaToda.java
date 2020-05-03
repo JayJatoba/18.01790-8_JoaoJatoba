@@ -5,6 +5,16 @@ import java.util.Scanner;
 import javax.lang.model.util.ElementScanner6;
 
 public class VilaToda {
+
+    static ArrayList<ArrayList<String>> Smissions = new ArrayList<>();
+    static ArrayList<ArrayList<String>> Amissions = new ArrayList<>();
+    static ArrayList<ArrayList<String>> Bmissions = new ArrayList<>();
+    static ArrayList<ArrayList<String>> Cmissions = new ArrayList<>();
+    static ArrayList<ArrayList<String>> Dmissions = new ArrayList<>();
+    static ArrayList<Mission> missions = new ArrayList<>();
+
+
+
     public void todaVila(){
         // Cada rank de missao tem uma propria lista de missoes
         Mission rankSmission = new Mission(Smissions);
@@ -15,6 +25,7 @@ public class VilaToda {
         
 
         criarMissions(rankSmission,rankAmission,rankBmission,rankCmission,rankDmission);  
+        Random rand1 = new Random();
         
 
 
@@ -35,9 +46,11 @@ public class VilaToda {
             }
         }
 
+
+
         String atividadeJounin, atividadeChuunin;
-        atividadeJounin = rankSmission.getRandomMission().get(1);
-        atividadeChuunin = rankAmission.getRandomMission().get(1);
+        atividadeJounin = getRandomRank(missions).getRandomMission().get(1);
+        atividadeChuunin = getRandomRank(missions).getRandomMission().get(1);
 
 
         Ninja ninja = new Ninja("Naruto", "Uzumaki");
@@ -54,7 +67,10 @@ public class VilaToda {
         
 
     }
-    
+    private static int getRandomNumberInRange(int min,int max){
+        Random r=new Random();
+        return r.nextInt((max-min)+1)+min;
+    }
     
     
     static void mostrarTreino(Ninja ninja) {
@@ -91,12 +107,7 @@ public class VilaToda {
 
 
     
-        static ArrayList<ArrayList<String>> Smissions = new ArrayList<>();
-        static ArrayList<ArrayList<String>> Amissions = new ArrayList<>();
-        static ArrayList<ArrayList<String>> Bmissions = new ArrayList<>();
-        static ArrayList<ArrayList<String>> Cmissions = new ArrayList<>();
-        static ArrayList<ArrayList<String>> Dmissions = new ArrayList<>();
-        static ArrayList<Mission> missions = new ArrayList<>();
+    
 
     static void criarMissions(Mission rankSmission, Mission rankAmission, Mission rankBmission, Mission rankCmission, Mission rankDmission){
         rankSmission.rank = "S";
@@ -138,9 +149,23 @@ public class VilaToda {
             return false;
         }
         return true;
-
-        
     }
     
+
+    // Dependendo do seu ranking de ninja, voce pode pegar ranks diferentes de missoes
+    static Mission getRandomRank(ArrayList<Mission> missions){
+        String rank = opcoesMissao();
+        if (rank.equals("S")){
+            return missions.get(getRandomNumberInRange(0, missions.size()));
+        }else if (rank.equals("A")){
+            return missions.get(getRandomNumberInRange(1, missions.size()));
+        }else if(rank.equals("B")){
+            return missions.get(getRandomNumberInRange(2, missions.size()));
+        }else if(rank.equals("C")){
+            return missions.get(getRandomNumberInRange(3, missions.size()));
+        }else {
+            return missions.get(4);
+        }
+    }
 
 }
