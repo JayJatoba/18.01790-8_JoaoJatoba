@@ -3,6 +3,7 @@ public class Ninja {
     private String name;
     private String family;
     private String[] jutsus;
+    
 
     // Construtor da classe Ninja
     public Ninja(String name, String family){
