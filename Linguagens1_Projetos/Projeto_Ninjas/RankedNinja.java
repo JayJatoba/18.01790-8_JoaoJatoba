@@ -16,5 +16,4 @@ public class RankedNinja extends Ninja{
     public void gotoMission(){
         System.out.println("Indo para missao: "+ mission);
     }
-
 }
