@@ -2,7 +2,7 @@
  * Vendedor
  */
 public class Vendedor extends Funcionario{
-// nao cheira bem----------
+
     private Gerente gerente;
 
 
@@ -18,8 +18,7 @@ public class Vendedor extends Funcionario{
             this.salarioBase = novoSalario;
             return true;
         }
-        else
-            return false;
+        return false;
     }
 
     /**
