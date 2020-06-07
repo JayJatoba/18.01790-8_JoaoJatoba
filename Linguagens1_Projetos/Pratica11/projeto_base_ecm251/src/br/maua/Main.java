@@ -9,6 +9,13 @@ import br.maua.model.Dog;
 
 import java.util.ArrayList;
 
+/**
+ * Representação da abstração dos animais. Ela assina a implementação das interfaces Walk e Eat.
+ * @author João Guilherme Martins Jatobá - jguilhermejatoba@hotmail.com
+ * @since 01/06/2020
+ * @version 1.0
+ */
+
 public class Main {
 
     public static void main(String[] args) {
