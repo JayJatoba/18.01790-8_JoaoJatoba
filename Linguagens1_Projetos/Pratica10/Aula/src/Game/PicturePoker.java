@@ -20,7 +20,7 @@ public class PicturePoker {
         showPicturePokerList(hand.getHand());
         System.out.println("Valor da mao: " + hand.checkHand(hand.getHand()));
 
-
+        // Comentario teste GitHub Desktop 
         // System.out.println("Baralho Atual: ");
         // showPicturePokerList(dealer.getDeck().getDeckList());
 
