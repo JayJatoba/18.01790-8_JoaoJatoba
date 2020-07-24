@@ -2,6 +2,7 @@ import br.maua.Noh_Raiz;
 import br.maua.Nohs;
 
 public class App {
+    public static int soma;
     public static void main(String[] args) throws Exception {
         
 
@@ -30,10 +31,64 @@ public class App {
 
         no1.noh_proximo=no2;
         no1.noh_pai=raiz.noh_raiz;
-        no1.noh_pai=raiz.noh_raiz;
+        no2.noh_pai=raiz.noh_raiz;
 
-        
+        no1.noh_prime_filho=no3;
+        no3.noh_proximo=no4;
+        no4.noh_proximo=no5;
+        no3.noh_pai=no1;
+        no4.noh_pai=no1;
+        no5.noh_pai=no1;
+
+        no4.noh_prime_filho=no8;
+        no8.noh_proximo=no9;
+        no9.noh_proximo=no10;
+        no8.noh_pai=no4;
+        no9.noh_pai=no4;
+        no10.noh_pai=no4;
+
+        no5.noh_prime_filho=no11;
+        no11.noh_proximo=no12;
+        no12.noh_proximo=no13;
+        no11.noh_pai=no5;
+        no12.noh_pai=no5;
+        no13.noh_pai=no5;
+
+        no2.noh_prime_filho=no6;
+        no6.noh_proximo=no7;
+        no6.noh_pai=no2;
+        no7.noh_pai=no2;
+
+        no7.noh_prime_filho=no14;
+        no14.noh_proximo=no15;
+        no14.noh_pai=no7;
+        no15.noh_pai=no7;
+
+        no14.noh_prime_filho=no16;
+        no16.noh_proximo=no17;
+        no16.noh_pai=no14;
+        no17.noh_pai=no14;
+
+        no15.noh_prime_filho=no18;
+        no18.noh_pai=no15;
+
+        somaMemoria(no2, no2);
+        somaMemoria(no1, no1);
+        somaMemoria(raiz.noh_raiz, raiz.noh_raiz);
 
 
+    }
+    public static void somaMemoria(Nohs ponteiro,Nohs original){
+        Nohs aux = ponteiro.noh_prime_filho;
+        while(aux!=null){
+            somaMemoria(aux,original);
+            aux=aux.noh_proximo;
+        }
+        soma=soma + ponteiro.getMemoria();
+        if (ponteiro==original){
+            System.out.println("\n**** Funcao somaMemoria *****");
+            System.out.println("Diretorio: "+original.getDiretorio()+"\nTotal = "+soma+" Kbytes");
+            soma=0;
+        }
     }
 }

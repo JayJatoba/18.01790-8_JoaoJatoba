@@ -7,6 +7,7 @@ public class Nohs {
     public Nohs noh_pai;
     public Nohs noh_prime_filho;
     public Nohs noh_proximo;
+    public int somaMemoria;
 
     public Nohs(int item, String diretorio, int memoria) {
         this.item = item;
@@ -40,6 +41,18 @@ public class Nohs {
         Nohs aux=ponteiro;
         System.out.println(aux.noh_pai.getDiretorio());
     }
+
+    public static void posOrder(Nohs ponteiro){
+        Nohs aux = ponteiro.noh_prime_filho;
+        
+        while(aux!=null){
+            posOrder(aux);
+            aux=aux.noh_proximo;
+        }
+        System.out.println(ponteiro.item);
+    }
+
+    
 
     public int getItem() {
         return item;
