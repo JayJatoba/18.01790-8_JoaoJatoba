@@ -35,12 +35,21 @@ public class App {
         Nohs.preOrder(raiz.noh_raiz);
         System.out.println("\nPor PostOrder: ");
         Nohs.posOrder(raiz.noh_raiz);
-        System.out.println("Por InOrder: ");
+        System.out.println("\nPor InOrder: ");
         Nohs.inOrder(raiz.noh_raiz);
-        System.out.println("Valor max = "+maiorValor(raiz.noh_raiz));
-        System.out.println("Valor min = "+menorValor(raiz.noh_raiz));
-        System.out.println("Quantidade nos = "+quantidadesNohs(raiz.noh_raiz));
+        System.out.println("\nValor min = "+menorValor(raiz.noh_raiz));
+        System.out.println("\nQuantidade nos = "+raiz.getTamanho());
+        System.out.println("\nSoma total = "+somaValor(raiz.noh_raiz));
+        System.out.println("\nMédia total = "+mediaValor(raiz));
+        System.out.println("\nMultiplos de dois: ");
+        Nohs.multDois(raiz.noh_raiz);
+        System.out.println("\nProcura valor: ");
+        Nohs.procuraValor(raiz.noh_raiz, 9);
+        
+
     }
+    
+    
     public static String procuraValor(ArrayList<Nohs> lista){
         System.out.println("Qual o valor que voce quer procurar?");
         Scanner sc = new Scanner(System.in);
@@ -54,27 +63,12 @@ public class App {
         return "Valor nao encontrado";
     }
 
-    public static int maiorValor(Nohs node){
-        if (node == null)
-            return Integer.MIN_VALUE;
-        int valor = node.getItem();
-        int valorEsq=maiorValor(node.noh_esquerda);
-        int valorDir=maiorValor(node.noh_direita);
-
-        if (valorEsq>valor)
-            valor = valorEsq;
-        if(valorDir>valor)
-            valor = valorDir;
-        
-        return valor;
-    }
-
-    public static int menorValor(Nohs node){
-        if (node == null)
+    public static int menorValor(Nohs ponteiro){
+        if (ponteiro == null)
             return Integer.MAX_VALUE;
-        int valor = node.getItem();
-        int valorEsq=menorValor(node.noh_esquerda);
-        int valorDir=menorValor(node.noh_direita);
+        int valor = ponteiro.getItem();
+        int valorEsq=menorValor(ponteiro.noh_esquerda);
+        int valorDir=menorValor(ponteiro.noh_direita);
 
         if (valorEsq<valor)
             valor = valorEsq;
@@ -84,54 +78,30 @@ public class App {
         return valor;
     }
 
-    public static String mediaValor(ArrayList<Nohs> lista){
-        int valor=0;
-        for (Nohs nohs : lista) {
-            valor+=nohs.getItem();
-        }
-        return "Media valor: "+valor/lista.size();
+    public static int mediaValor(Noh_Raiz raiz){
+        return somaValor(raiz.noh_raiz)/raiz.getTamanho();
     }
 
-    public static int quantidadesNulls(ArrayList<Nohs> lista){
-        int totalNulls=0;
-        for (Nohs nohs : lista) {
-            if (nohs.noh_direita==null) {
-                totalNulls++;
-            }
-            if (nohs.noh_esquerda==null) {
-                totalNulls++;
-            }
-            if (nohs.noh_pai==null) {
-                totalNulls++;
-            }
-        }
+    
+
+
+    public static int somaValor(Nohs ponteiro){
+        if (ponteiro == null)
+            return 0;
         
-        return totalNulls;
+        return (ponteiro.getItem()+somaValor(ponteiro.noh_esquerda)+somaValor(ponteiro.noh_direita));
     }
 
-
-    public static int quantidadesNohs(Nohs node){
-        if (node == null)
+    public static int quantidadesNohs(Nohs ponteiro){
+        if (ponteiro == null)
             return 1;
-        
-        int valorEsq=quantidadesNohs(node.noh_esquerda);
-        int valorDir=quantidadesNohs(node.noh_direita);
+        int valorEsq=quantidadesNohs(ponteiro.noh_esquerda);
+        int valorDir=quantidadesNohs(ponteiro.noh_direita);
         return valorEsq+valorDir;
     }
 
-    public static int quantidadesFolhas(ArrayList<Nohs> lista){
-        int totalFolhas=0;
-        for (Nohs nohs : lista) {
-            if (!(Nohs.ehDireito(nohs) && Nohs.ehEsquerdo(nohs))) {
-                totalFolhas++;
-            }
-        }
-        
-        return totalFolhas;
-    }
 
     public static int alturaArvore(Nohs ponteiro){
-        
         if (ponteiro.noh_esquerda == null){
             return 0;
         }
