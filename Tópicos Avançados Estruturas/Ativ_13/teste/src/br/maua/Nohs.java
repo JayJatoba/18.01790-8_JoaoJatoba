@@ -1,5 +1,10 @@
 package br.maua;
 
+import java.util.LinkedList;
+import java.util.Queue;
+
+
+
 public class Nohs {
     protected int item;
     public Nohs noh_pai;
@@ -50,32 +55,117 @@ public class Nohs {
         if (ehDireito(ponteiro)) {
             multDois(ponteiro.noh_direita);
         }
-        
     }
 
-    public static void procuraValor(Nohs ponteiro,int valor){
-        
-        if(ehEsquerdo(ponteiro)){
-            
-            procuraValor(ponteiro.noh_esquerda,valor);
+    public static boolean procuraValor(Nohs ponteiro,int valor,int nivel){
+        if(ponteiro.getItem()==valor){
+            System.out.println("Valor "+valor+" encontrado no nivel "+nivel);
+            return true;
+        }
+        else if(ehEsquerdo(ponteiro) &&ponteiro.getItem()>valor){
+            nivel+=1;
+            procuraValor(ponteiro.noh_esquerda,valor,nivel);
         }
         
-        if (ehDireito(ponteiro)) {
-            
-            procuraValor(ponteiro.noh_direita, valor);
+        else if (ehDireito(ponteiro) &&ponteiro.getItem()<valor) {
+            nivel+=1;
+            procuraValor(ponteiro.noh_direita, valor,nivel);
         }
-        int valorEsq = ponteiro.noh_esquerda.getItem();
-        int valorDir = ponteiro.noh_direita.getItem();
-        if (ponteiro.getItem()==valor){
-            System.out.println("Valor "+valor+" encontrado.");
-            return;}
-        else if(ponteiro.noh_pai==null && valorEsq!= valor && valorDir!=valor){
-            System.out.println("Valor "+valor+" nao encontrado.");
+        
+        return false;
+    }
+
+    public static void insereValor(Nohs ponteiro,int valor){
+        if (procuraValor(ponteiro, valor, 0)){
+            System.out.println("Elemento "+valor+" ja existente na arvore.");
             return;
         }
-        
+        else{
+            if(ponteiro.noh_esquerda==null && ponteiro.getItem()>valor){
+                ponteiro.noh_esquerda=new Nohs(valor);
+                ponteiro.noh_esquerda.noh_pai=ponteiro;
+                System.out.println("Valor "+valor+" adicionado com sucesso.");
+            }
+            else if(ponteiro.noh_direita==null && ponteiro.getItem()<valor){
+                ponteiro.noh_direita=new Nohs(valor);
+                ponteiro.noh_direita.noh_pai=ponteiro;
+                System.out.println("Valor "+valor+" adicionado com sucesso.");
+                
+            }
+            else if(ehEsquerdo(ponteiro) && ponteiro.getItem()>valor){
+                insereValor(ponteiro.noh_esquerda,valor);
+            }
+            
+            else if (ehDireito(ponteiro) && ponteiro.getItem()<valor) {
+                insereValor(ponteiro.noh_direita, valor);
+            }
+
+
+        }
+          
     }
+    public static int quantidadeNohs(Nohs ponteiro)  
+    { 
+        Queue<Nohs> queue = new LinkedList<Nohs>(); 
+         
+        queue.add(ponteiro); 
+        int contagem=0; 
+        
+        while (!queue.isEmpty())  
+        {
+            Nohs temp = queue.poll(); 
+            
+            contagem++; 
+            
+            if (temp.noh_esquerda != null)  
+            { 
+                queue.add(temp.noh_esquerda); 
+            } 
+             
+            if (temp.noh_direita != null)  
+            { 
+                queue.add(temp.noh_direita); 
+            } 
+        } 
+        return contagem;
+    } 
+    public static int quantidadeNulls(Nohs ponteiro)  
+    { 
+        Queue<Nohs> queue = new LinkedList<Nohs>(); 
+         
+        queue.add(ponteiro); 
+        int contagem=0; 
+        
+        while (!queue.isEmpty())  
+        {
+            
+            Nohs temp = queue.poll(); 
+            
+            
+            if (temp.noh_pai==null){
+                contagem++; 
+            }
+            if (temp.noh_direita==null){
+                contagem++;
+            }
+            if (temp.noh_esquerda==null){
+                contagem++;
+            }
+            if (temp.noh_esquerda != null)  
+            { 
+                queue.add(temp.noh_esquerda); 
+            } 
+             
+            if (temp.noh_direita != null)  
+            { 
+                queue.add(temp.noh_direita); 
+            } 
+        } 
+        return contagem;
+    } 
     
+
+
     public static boolean ehEsquerdo(Nohs ponteiro){
         if(ponteiro.noh_esquerda==null)
             return false;
