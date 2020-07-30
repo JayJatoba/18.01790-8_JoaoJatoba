@@ -19,12 +19,18 @@ public class App {
 
         raiz.noh_raiz.noh_esquerda=no1;
         raiz.noh_raiz.noh_direita=no2;
+        no1.noh_pai=raiz.noh_raiz;
+        no2.noh_pai=raiz.noh_raiz;
 
         no2.noh_esquerda=no3;
         no2.noh_direita=no4;
+        no3.noh_pai=no2;
+        no4.noh_pai=no2;
 
         no3.noh_esquerda=no5;
         no3.noh_direita=no6;
+        no5.noh_pai=no3;
+        no6.noh_pai=no3;
 
         nohs.add(raiz.noh_raiz);
         nohs.add(no1);
@@ -77,6 +83,7 @@ public class App {
                 return "Valor encontrado com sucesso.";
             }
         }
+        
         return "Valor nao encontrado";
     }
 
@@ -121,7 +128,6 @@ public class App {
                 totalNulls++;
             }
         }
-        
         return totalNulls;
     }
 

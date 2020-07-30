@@ -34,11 +34,11 @@ public class Nohs {
 
     public static void inOrder(Nohs ponteiro){
         if(ehEsquerdo(ponteiro)){
-            posOrder(ponteiro.noh_esquerda);
+            inOrder(ponteiro.noh_esquerda);
         }
         System.out.println(ponteiro.getItem());
         if (ehDireito(ponteiro)) {
-            posOrder(ponteiro.noh_direita);
+            inOrder(ponteiro.noh_direita);
         }
     }
 
