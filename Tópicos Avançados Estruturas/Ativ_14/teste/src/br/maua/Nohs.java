@@ -38,11 +38,11 @@ public class Nohs {
     }
     public static void inOrder(Nohs ponteiro){
         if(ehEsquerdo(ponteiro)){
-            posOrder(ponteiro.noh_esquerda);
+            inOrder(ponteiro.noh_esquerda);
         }
         System.out.println(ponteiro.getItem());
         if (ehDireito(ponteiro)) {
-            posOrder(ponteiro.noh_direita);
+            inOrder(ponteiro.noh_direita);
         }
     }
 
@@ -64,20 +64,21 @@ public class Nohs {
         }
         else if(ehEsquerdo(ponteiro) &&ponteiro.getItem()>valor){
             nivel+=1;
-            procuraValor(ponteiro.noh_esquerda,valor,nivel);
+            return procuraValor(ponteiro.noh_esquerda,valor,nivel);
         }
         
         else if (ehDireito(ponteiro) &&ponteiro.getItem()<valor) {
             nivel+=1;
-            procuraValor(ponteiro.noh_direita, valor,nivel);
+            return procuraValor(ponteiro.noh_direita, valor,nivel);
         }
         
         return false;
     }
 
-    public static void insereValor(Nohs ponteiro,int valor){
+    public static void insereValor(Nohs ponteiro,int valor, Noh_Raiz raiz){
         if (procuraValor(ponteiro, valor, 0)){
             System.out.println("Elemento "+valor+" ja existente na arvore.");
+            raiz.setTamanho(raiz.getTamanho()+1);
             return;
         }
         else{
@@ -93,11 +94,11 @@ public class Nohs {
                 
             }
             else if(ehEsquerdo(ponteiro) && ponteiro.getItem()>valor){
-                insereValor(ponteiro.noh_esquerda,valor);
+                insereValor(ponteiro.noh_esquerda,valor,raiz);
             }
             
             else if (ehDireito(ponteiro) && ponteiro.getItem()<valor) {
-                insereValor(ponteiro.noh_direita, valor);
+                insereValor(ponteiro.noh_direita, valor,raiz);
             }
 
 

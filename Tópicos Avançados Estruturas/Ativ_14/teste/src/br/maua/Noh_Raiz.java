@@ -2,15 +2,18 @@ package br.maua;
 
 
 public class Noh_Raiz {
-    protected int tamanhoIni;
+    protected int tamanho;
     public Nohs noh_raiz;
 
     public Noh_Raiz(int tamanho,int item) {
-        this.tamanhoIni = tamanho;
+        this.tamanho = tamanho;
         noh_raiz = new Nohs(item);
     }
 
     public int getTamanho() {
-        return tamanhoIni;
+        return tamanho;
+    }
+    public void setTamanho(int tamanho) {
+        this.tamanho = tamanho;
     }
 }

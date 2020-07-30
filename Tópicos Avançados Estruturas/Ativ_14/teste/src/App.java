@@ -1,4 +1,5 @@
 
+import java.util.Scanner;
 
 import br.maua.Noh_Raiz;
 import br.maua.Nohs;
@@ -30,12 +31,8 @@ public class App {
         no3.noh_pai=no5;
 
         System.out.println("Questao 2-)");
-        Nohs.insereValor(raiz.noh_raiz, 0);
+        Nohs.insereValor(raiz.noh_raiz, 0, raiz);
         Nohs.procuraValor(raiz.noh_raiz, 0, 0);
-        Nohs.insereValor(raiz.noh_raiz, 4);
-        Nohs.insereValor(raiz.noh_raiz, 11);
-        Nohs.insereValor(raiz.noh_raiz, 12);
-        Nohs.insereValor(raiz.noh_raiz, 4);
         System.out.println("\nQuestao3-)\nPor PreOrder: ");
         Nohs.preOrder(raiz.noh_raiz);
         System.out.println("\nQuestao 4-)\nPor PostOrder: ");
@@ -46,9 +43,8 @@ public class App {
         Nohs.procuraValor(raiz.noh_raiz, 8, 0);
         Nohs.procuraValor(raiz.noh_raiz, 10, 0);
         System.out.println("\nQuestao 7-)\nValor min = "+menorValor(raiz.noh_raiz));
-        System.out.println("\nQuestao 8-)\nQuantidade nos = "+Nohs.quantidadeNohs(raiz.noh_raiz));
+        System.out.println("\nQuestao 8-)\nQuantidade nos = "+raiz.getTamanho());
         System.out.println("\nQuestao 9-)\nMédia aritmetica total = "+mediaValor(raiz));
-        System.out.println("wefwfe");
         System.out.println("\nQuestao 10-)\nAltura: "+alturaArvore(raiz.noh_raiz));
         System.out.println("\nQuestao 11-)\nQuantidade de nulls = "+Nohs.quantidadeNulls(raiz.noh_raiz));
         System.out.println("\nQuestao 12-)\nMultiplos de dois: ");
@@ -73,7 +69,7 @@ public class App {
     }
 
     public static double mediaValor(Noh_Raiz raiz){
-        return somaValor(raiz.noh_raiz)/Nohs.quantidadeNohs(raiz.noh_raiz);
+        return somaValor(raiz.noh_raiz)/raiz.getTamanho();
     }
 
     public static int somaValor(Nohs ponteiro){
