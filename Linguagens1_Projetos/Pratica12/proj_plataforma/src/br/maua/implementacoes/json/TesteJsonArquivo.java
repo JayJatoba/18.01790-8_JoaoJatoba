@@ -1,30 +1,32 @@
 package br.maua.implementacoes.json;
 
+import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.ObjectInputStream;
 
 import org.json.JSONArray;
 
-import br.maua.implementacoes.projeto.model.Jogo;
-import br.maua.implementacoes.projeto.model.ListaDeJogos;
-import br.maua.implementacoes.projeto.parsers.ListaDeJogosParser;
+import br.maua.projeto.parsers.ListaDeJogosParser;
+import br.maua.projeto.model.Jogo;
+import br.maua.projeto.model.ListaDeJogos;
 
 public class TesteJsonArquivo {
     public static void main(String[] args) {
-//        ListaDeJogos lista = new ListaDeJogos();
-//        lista.addJogo(new Jogo("PC", "Minecraft"));
-//        lista.addJogo(new Jogo("PC", "Cyberpunk"));
-//        lista.addJogo(new Jogo("PC", "CS:Go"));
-//        lista.addJogo(new Jogo("PC", "Terraria"));
-//        lista.addJogo(new Jogo("PS4", "God of War"));
-//        lista.addJogo(new Jogo("PS4", "The Last of Us"));
-//        lista.addJogo(new Jogo("PS4", "ghost of tsushima"));
-//
-//        JSONArray json = ListaDeJogosParser.toJson(lista);
-//        escreverArquivo("jogos.json", json);
+    //    ListaDeJogos lista = new ListaDeJogos();
+    //    lista.addJogo(new Jogo("PC", "Minecraft"));
+    //    lista.addJogo(new Jogo("PC", "Cyberpunk"));
+    //    lista.addJogo(new Jogo("PC", "CS:Go"));
+    //    lista.addJogo(new Jogo("PC", "Terraria"));
+    //    lista.addJogo(new Jogo("PS4", "God of War"));
+    //    lista.addJogo(new Jogo("PS4", "The Last of Us"));
+    //    lista.addJogo(new Jogo("PS4", "ghost of tsushima"));
+
+    //    JSONArray json = ListaDeJogosParser.toJson(lista);
+    //    escreverArquivo("jogos.json", json);
         ListaDeJogos lista = ListaDeJogosParser.fromJson(lerArquivo("jogos.json"));
         System.out.println("Lista Carregada:");
         System.out.println("" + lista);
@@ -35,13 +37,14 @@ public class TesteJsonArquivo {
         File file = new File(nomeArquivo);
         try{
             //Cria o fluxo de leitura
-            ObjectInputStream fileReader = new ObjectInputStream(
-                    new FileInputStream(file)
-            );
-            json = (JSONArray)fileReader.readObject();
+            FileReader fileReader = new FileReader(file);
+            //Buffer de leitura
+            BufferedReader bufferedReader = new BufferedReader(fileReader);
 
+            json = new JSONArray (bufferedReader.readLine());
 
             //Feche tudo ao terminar
+            bufferedReader.close();
             fileReader.close();
 
         }catch (Exception exception){

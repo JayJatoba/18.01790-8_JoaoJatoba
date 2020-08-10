@@ -13,13 +13,13 @@ public class JogoParser {
         return json;
     }
 
-    public static Jogo fromJson(JSONObject json){
+    public static Jogo fromJson(JSONObject item){
         Jogo jogo = new Jogo(
-            json.getString("plataforma"),
-            json.getString("nome")
+            item.getString("plataforma"),
+            item.getString("nome")
         );
         jogo.setStatus(
-            StatusParser.toStatus(json.getString("status"))
+            StatusParser.toStatus(item.getString("status"))
         );
 
         return jogo;
