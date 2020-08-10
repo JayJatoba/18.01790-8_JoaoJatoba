@@ -29,7 +29,8 @@ public enum Status {
         }
     }, ABANDONADO{
         @Override
-        public String toString() {
+        public String toString(){
             return "Abandonado";
-        };
-}}
+        }
+    };
+}

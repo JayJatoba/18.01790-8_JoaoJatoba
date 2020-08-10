@@ -1,4 +1,4 @@
-package br.maua.model;
+package br.maua.projeto.model;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,6 +16,10 @@ public class ListaDeJogos {
     @Override
     public String toString() {
         return "ListaDeJogos = " + minhaListaDeJogos;
+    }
+
+    public final List<Jogo> getJogos(){
+        return this.minhaListaDeJogos;
     }
     
 }

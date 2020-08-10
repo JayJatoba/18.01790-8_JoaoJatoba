@@ -1,7 +1,7 @@
-package br.maua.teste;
+package br.maua.projeto.teste;
 
-import br.maua.model.Jogo;
-import br.maua.model.ListaDeJogos;
+import br.maua.projeto.model.Jogo;
+import br.maua.projeto.model.ListaDeJogos;
 
 public class TesteListaDeJogos {
     public static void main(String[] args) {
