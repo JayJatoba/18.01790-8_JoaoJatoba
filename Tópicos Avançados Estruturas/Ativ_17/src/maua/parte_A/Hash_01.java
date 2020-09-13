@@ -1,4 +1,7 @@
-package maua;
+package maua.parte_A;
+
+import maua.parte_A.Aluno;
+
 public class Hash_01 {
     public static void main(String[] args) {
         Aluno[] tabAluno = new Aluno[10];
@@ -13,7 +16,7 @@ public class Hash_01 {
         tabAluno[7] = new Aluno(57,"Paulo");
         tabAluno[8] = new Aluno(80,"Sara");
         tabAluno[9] = new Aluno(90,"Davi");
-        Integer hashCode = null, chave;
+        Integer hashCode = null,chave;
         Aluno[] tabHash = new Aluno[10];
         for (int i=0; i<tabAluno.length; i++ ) {
             chave = (tabAluno[i].getCodAluno());
@@ -40,8 +43,7 @@ public class Hash_01 {
                 System.out.println("Slot " + i + " ---> Valor nulo");
             else
                 System.out.print ("Slot " + i + " ---> " +
-                        tabHash[i].getCodAluno() + " " + tabHash[i].getNome() + '\n')
-                        ;
+                        tabHash[i].getCodAluno() + " " + tabHash[i].getNome() + '\n');
     }
     // -----------------------------------------------------------
     public static Integer hash(Integer key) {

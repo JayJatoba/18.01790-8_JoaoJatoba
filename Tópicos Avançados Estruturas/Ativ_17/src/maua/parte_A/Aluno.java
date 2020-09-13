@@ -1,4 +1,4 @@
-package maua;
+package maua.parte_A;
 public class Aluno {
     private Integer codAluno;
     private String nome;

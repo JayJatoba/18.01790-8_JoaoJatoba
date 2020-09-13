@@ -1,4 +1,4 @@
-package maua;
+package maua.parte_B;
 
 import java.util.List;
 
