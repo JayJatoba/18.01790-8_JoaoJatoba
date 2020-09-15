@@ -1,6 +1,8 @@
 package maua.parte_B;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
 
 public class TestHash {
     public static void main(String[] args) {
@@ -25,32 +27,34 @@ public class TestHash {
             }
         }
     }
+
     public static void metodo(int tamanho){
         int chaves;
         if(tamanho==10){chaves = 20;}
         else{chaves=100000;}
 
-        List<Integer> tabKeys = Arrays.asList(new Integer[chaves]);
-        for (int i=1;i< tabKeys.size();i++){
-            tabKeys.set(i, i);
-        }
-        System.out.println();
-
-        List<List<Integer>> tabHash = new ArrayList<>(tamanho);
-        for (int j=0;j< tamanho;j++){
-            tabHash.add(new LinkedList<>());
+        Integer[] tabKeys=new Integer[chaves];
+        for (int i = 1; i < chaves; i++) {
+            tabKeys[i]=i;
         }
 
-        System.out.println();
-        for (int m=1;m< tabKeys.size();m++){
-            SList.insereInicio(tabHash.get(hash(m,tamanho)),tabKeys.get(m));
+        List<SList> tabHash = new ArrayList<>(tamanho);
+        for (int i = 0; i < tamanho; i++) {
+            tabHash.add(new SList());
         }
-        for (List<Integer> hash : tabHash) {
 
-            System.out.println(hash);
+        for (int i = 1; i < chaves; i++) {
+
+            Integer valor = hash(tabKeys[i],tamanho);
+            tabHash.get(valor).insereInicio(tabKeys[i]);
         }
+
+        for (int i = 0; i < tamanho; i++) {
+            SList.printLista(tabHash.get(i));
+        }
+
+
     }
-
 
     public static Integer hash(Integer key,int tamanho) {
         return (key % tamanho);

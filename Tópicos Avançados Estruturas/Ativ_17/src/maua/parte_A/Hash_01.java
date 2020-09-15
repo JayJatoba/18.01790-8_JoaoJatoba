@@ -1,6 +1,5 @@
 package maua.parte_A;
 
-import maua.parte_A.Aluno;
 
 public class Hash_01 {
     public static void main(String[] args) {
