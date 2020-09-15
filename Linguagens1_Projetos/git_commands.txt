@@ -16,3 +16,4 @@ os git global são só se necessários
 git remote add origin site_git (se necessário)
 
 git push -u origin master -> envia para o GitHub
+meu deus, demorou mas consegui
